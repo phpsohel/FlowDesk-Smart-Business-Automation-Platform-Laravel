@@ -5,21 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Workflow extends Model
+class ScheduledJob extends Model
 {
    use HasFactory;
 
     protected $fillable = [
         'name',
-        'trigger_type',
-        'condition_type',
-        'action_type',
+        'job_type',
+        'frequency',
+        'next_run_at',
+        'last_run_at',
+        'status',
         'description',
-        'is_active',
     ];
-
-    public function logs()
-    {
-        return $this->hasMany(WorkflowLog::class);
-    }
 }

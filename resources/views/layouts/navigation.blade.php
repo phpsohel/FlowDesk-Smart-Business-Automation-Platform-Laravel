@@ -69,22 +69,32 @@
                 Automation
             </p>
 
-            <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100">
+            <a href="{{ route('workflows.index') }}" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100
+            
+            {{ request()->routeIs('workflows.*') ? 'bg-indigo-100 text-indigo-600' : 'text-gray-600 hover:bg-gray-100' }}">
                 <i data-lucide="workflow" class="w-5 h-5"></i>
                 Workflows
             </a>
 
-            <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100">
+            <a href="{{ route('scheduled-jobs.index') }}" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100
+            {{ request()->routeIs('scheduled-jobs.*') ? 'bg-indigo-100 text-indigo-600' : 'text-gray-600 hover:bg-gray-100' }}">
                 <i data-lucide="clock-3" class="w-5 h-5"></i>
                 Scheduled Jobs
             </a>
 
-            <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100">
+            <a href="{{ route('email-center.index') }}" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100
+            {{ request()->routeIs('email-center.*') ? 'bg-indigo-100 text-indigo-600' : 'text-gray-600 hover:bg-gray-100' }}">
                 <i data-lucide="mail" class="w-5 h-5"></i>
                 Email Center
             </a>
+            <a href="{{ route('email.logs') }}" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100
+            {{ request()->routeIs('email.logs') ? 'bg-indigo-100 text-indigo-600' : 'text-gray-600 hover:bg-gray-100' }}">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+                Email Logs
+            </a>
 
-            <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100">
+            <a href="{{ route('notifications.index') }}" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100
+            {{ request()->routeIs('notifications.*') ? 'bg-indigo-100 text-indigo-600' : 'text-gray-600 hover:bg-gray-100' }}">
                 <i data-lucide="bell" class="w-5 h-5"></i>
                 Notifications
             </a>
@@ -99,15 +109,32 @@
                 Reports
             </p>
 
-            <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100">
+            <a href="{{ route('reports.index') }}" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100
+            {{ request()->routeIs('reports.*') ? 'bg-indigo-100 text-indigo-600' : 'text-gray-600 hover:bg-gray-100' }}">
                 <i data-lucide="bar-chart-3" class="w-5 h-5"></i>
                 Reports
             </a>
 
-            <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100">
+            <a href="{{ route('analytics.index') }}" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100
+            {{ request()->routeIs('analytics.*') ? 'bg-indigo-100 text-indigo-600' : 'text-gray-600 hover:bg-gray-100' }}">
                 <i data-lucide="chart-column" class="w-5 h-5"></i>
                 Analytics
             </a>
+
+        </div>
+         <!-- Settings -->
+        <div>
+
+            <p class="px-3 text-xs font-semibold text-gray-400 uppercase mb-3">
+                Settings
+            </p>
+
+            <a href="{{ route('settings.index') }}" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100
+            {{ request()->routeIs('settings.*') ? 'bg-indigo-100 text-indigo-600' : 'text-gray-600 hover:bg-gray-100' }}">
+                <i data-lucide="settings" class="w-5 h-5"></i>
+                Settings
+            </a>
+
 
         </div>
 
