@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\InvoiceController;
+use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TaskController;
@@ -24,6 +25,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('customers', CustomerController::class);
     Route::resource('products', ProductController::class);
     Route::resource('invoices', InvoiceController::class);
+    Route::resource('payments', PaymentController::class);
     Route::resource('tasks', TaskController::class);
     Route::resource('workflows', WorkflowController::class);
 });

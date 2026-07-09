@@ -1,9 +1,8 @@
 <x-app-layout>
-    <div class="py-8 px-6 max-w-7xl mx-auto">
-        <h1 class="text-3xl font-bold text-gray-900">Good morning, admin! 👋</h1>
+    <div class="p-8 bg-gray-50 min-h-screen">
+        <h1 class="text-3xl font-bold text-gray-900">Good morning, admin! </h1>
         <p class="text-gray-500 mt-1">Here’s what’s happening with your business today.</p>
-        <p class="text-gray-500 mt-1">Here’s what’s happening with your business today.</p>
-
+        <br>
 
         <!-- Stats Cards -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">

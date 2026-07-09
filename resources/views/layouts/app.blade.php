@@ -19,8 +19,12 @@
         @include('layouts.navigation')
 
         <div class="lg:pl-64">
-            <main>
-                {{ $slot }}
+           <main>
+                @isset($slot)
+                    {{ $slot }}
+                @else
+                    @yield('content')
+                @endisset
             </main>
         </div>
     </div>

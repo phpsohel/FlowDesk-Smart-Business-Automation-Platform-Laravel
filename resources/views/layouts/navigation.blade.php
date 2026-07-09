@@ -32,27 +32,29 @@
                 Dashboard
             </a>
 
-            <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100">
-                <i data-lucide="users" class="w-5 h-5"></i>
-                Customers
-            </a>
+           <a href="{{ route('customers.index') }}"
+   class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium
+   {{ request()->routeIs('customers.*') ? 'bg-indigo-100 text-indigo-600' : 'text-gray-600 hover:bg-gray-100' }}">
+    <i data-lucide="users" class="w-5 h-5"></i>
+    Customers
+</a>
 
-            <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100">
+            <a href="{{ route('invoices.index') }}" class=" flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100{{ request()->routeIs('customers.*') ? 'bg-indigo-100 text-indigo-600' : 'text-gray-600 hover:bg-gray-100' }}">
                 <i data-lucide="file-text" class="w-5 h-5"></i>
                 Invoices
             </a>
 
-            <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100">
+            <a href="{{ route('payments.index') }}" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100{{ request()->routeIs('payments.*') ? 'bg-indigo-100 text-indigo-600' : 'text-gray-600 hover:bg-gray-100' }}">
                 <i data-lucide="wallet" class="w-5 h-5"></i>
                 Payments
             </a>
 
-            <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100">
+            <a href="{{ route('products.index') }}" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100">
                 <i data-lucide="package" class="w-5 h-5"></i>
                 Products
             </a>
 
-            <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100">
+            <a href="{{ route('tasks.index') }}" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-100">
                 <i data-lucide="check-square" class="w-5 h-5"></i>
                 Tasks
             </a>
